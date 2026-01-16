@@ -16,6 +16,7 @@
 
 TARGET_LINUX_KERNEL_VERSION := 4.4
 
+TARGET_SOC ?= $(TARGET_BOOTLOADER_BOARD_NAME)
 TARGET_SOC_BASE := exynos7885
 
 include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk
@@ -47,7 +48,7 @@ BOARD_USE_WA_ION_BUF_REF := true
 BOARD_HWC_VERSION := libhwc2.1
 TARGET_USES_HWC2 := true
 HWC_SKIP_VALIDATE := true
-BOARD_USES_HWC_SERVICES := false
+BOARD_USES_HWC_SERVICES := true
 
 # SCALER
 BOARD_USES_DEFAULT_CSC_HW_SCALER := true
